@@ -1,4 +1,4 @@
-package com.ehealth.server.dto;
+package com.ehealth.server.resources;
 
 public class UserCredentials {
     private String username;
