@@ -1,7 +1,7 @@
 package com.ehealth.server.resources;
 
 public class UserCredentials {
-    private String username;
+    private String email;
     private String password;
 
     // Default constructor for JSON (de)serialization
@@ -10,18 +10,18 @@ public class UserCredentials {
 
     // Constructor with parameters
     public UserCredentials(String email, String password) {
-        this.username = email;
+        this.email = email;
         this.password = password;
     }
 
     // Getter for username
     public String getEmail() {
-        return username;
+        return email;
     }
 
     // Setter for username
     public void setEmail(String email) {
-        this.username = username;
+        this.email = email;
     }
 
     // Getter for password
