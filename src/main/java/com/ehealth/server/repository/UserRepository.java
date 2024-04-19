@@ -20,8 +20,8 @@ public class UserRepository {
     // Method to find a user by credentials using UserCredentials DTO
     public User findUserByCredentials(@org.jetbrains.annotations.NotNull UserCredentials credentials) {
         TypedQuery<User> query = entityManager.createQuery(
-                "SELECT u FROM User u WHERE u.username = :username AND u.password = :password", User.class);
-        query.setParameter("username", credentials.getUsername());
+                "SELECT u FROM User u WHERE u.email = :email AND u.password = :password", User.class);
+        query.setParameter("email", credentials.getEmail());
         query.setParameter("password", credentials.getPassword());
         try {
             return query.getSingleResult();

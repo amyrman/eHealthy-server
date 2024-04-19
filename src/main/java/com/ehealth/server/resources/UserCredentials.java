@@ -9,18 +9,18 @@ public class UserCredentials {
     }
 
     // Constructor with parameters
-    public UserCredentials(String username, String password) {
-        this.username = username;
+    public UserCredentials(String email, String password) {
+        this.username = email;
         this.password = password;
     }
 
     // Getter for username
-    public String getUsername() {
+    public String getEmail() {
         return username;
     }
 
     // Setter for username
-    public void setUsername(String username) {
+    public void setEmail(String email) {
         this.username = username;
     }
 

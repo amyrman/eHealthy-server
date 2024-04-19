@@ -32,7 +32,7 @@ public class UserResource {
     @Path("/login")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response loginUser(UserCredentials credentials) {
-        if (credentials == null || credentials.getUsername() == null || credentials.getPassword() == null) {
+        if (credentials == null || credentials.getEmail() == null || credentials.getPassword() == null) {
             return Response.status(Response.Status.BAD_REQUEST).entity("Missing credentials").build();
         }
         User user = userRepository.findUserByCredentials(credentials);

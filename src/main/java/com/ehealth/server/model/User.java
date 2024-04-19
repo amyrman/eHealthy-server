@@ -12,18 +12,20 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-    private String password;
+    private String firstname;
+    private String lastname;
     private String email;
+    private String password;
 
     public User() {
         // no-args constructor required for JPA
     }
 
-    public User(String username, String password, String email) {
-        this.username = username;
-        this.password = password;
+    public User(String firstname, String lastname,  String email, String password) {
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.email = email;
+        this.password = password;
     }
 
     public Long getId() {
@@ -34,20 +36,20 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getPassword() {
-        return password;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmail() {
@@ -56,5 +58,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
